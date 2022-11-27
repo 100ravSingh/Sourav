@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sourav Singh</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -21,7 +21,7 @@
         <h1 class="section-1-heading">
           Software Developer
         </h1>
-        <img src="images/sourav.jpg" alt="Sourav Singh" class="person-img" />
+        <img src="images/sourav.jpg" alt="John Smith" class="person-img" />
         <h3 class="person-name">Sourav Singh</h3>
         <a href="#section-3" class="section-1-btn">Projects</a>
       </section>
@@ -136,10 +136,10 @@
       <!-- Section 4 -->
       <section class="section-4" id="section-4">
         <h1 class="section-heading section-4-heading">Contact Me</h1>
-        <form class="contact-form center" action="mailto:ss3225220@gmail.com" method="post" enctype="text/plain">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+        <form class="contact-form center" onsubmit="Mail(); reset(); return false;">
+          <input type="text" id="Name" placeholder="Name" />
+          <input type="email" id="Email" placeholder="Email" />
+          <textarea id="Message" placeholder="Message"></textarea>
           <input type="submit" value="Submit" class="contact-form-btn" />
         </form>
       </section>
@@ -172,5 +172,30 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script src ="https://smtpjs.com/v3/smtp.js"></script>
+ 
+
+   <script>
+
+    function Mail(){
+
+    let name = document.getElementById("Name").value;
+    let email = document.getElementById("Email").value;
+    let message = document.getElementById("Message").value;
+
+    Email.send({
+        SecureToken : "b3de66aa-8b19-4472-9622-a18f4e866f97"
+        To : 'ss3225220@gmail.com',
+        From : "ss3225220@gmail.com",
+        Subject : "Mail From Sourav Portfolio Website",
+        Body : "Name: " + name + "<br/> User Email: " + email + "<br/> User Message: " + message
+        }).then(
+        message => alert(message)
+   );
+   }
+   </script>
+
+
   </body>
 </html>
