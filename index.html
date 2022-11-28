@@ -175,27 +175,5 @@
 
     <script src ="https://smtpjs.com/v3/smtp.js"></script>
  
-
-   <script>
-
-    function Mail(){
-
-    let name = document.getElementById("Name").value;
-    let email = document.getElementById("Email").value;
-    let message = document.getElementById("Message").value;
-
-    Email.send({
-        SecureToken : "575f27ce-479f-4b63-9f48-ed79387f7e77", 
-        To : 'ss3225220@gmail.com',
-        From : "ss3225220@gmail.com",
-        Subject : "Mail From Sourav Portfolio Website",
-        Body : "Name: " + name + "<br/> User Email: " + email + "<br/> User Message: " + message
-        }).then(
-        message => alert(message)
-   );
-   }
-   </script>
-
-
   </body>
 </html>
