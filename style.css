@@ -90,6 +90,19 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
+
+.section-1-btn-2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #fff;
+  border: 0.3rem solid #333;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin: 20px 0px;
+}
+
 /* End of Section 1 */
 
 /* Navbar */
